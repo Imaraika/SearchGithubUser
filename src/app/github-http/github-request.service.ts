@@ -22,8 +22,6 @@ export class GithubRequestService {
          this.http.get<ApiResponse>('https://api.github.com/users/Imaraika?access_token='+environment.myApi).toPromise().then(response=>{
            this.user.avatar_url = response.avatar_url
            this.user.login = response.login
-           
-           
   
            resolve()
          },
